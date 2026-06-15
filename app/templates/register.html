@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register - AppShield</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1><b>Pothen vava</b></h1>
-    <form method="POST" action="/register">
+    <div class="auth-container">
+        <h1>AppShield</h1>
+        <h2>Create Account</h2>
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Email"
-    >
+        <form method="POST" action="/register">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-    <input
-        type="password"
-        name="password"
-        placeholder="Password"
-    >
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="At least 6 characters" required minlength="6">
 
-    <button type="submit">
-        Register
-    </button>
+            <button type="submit">Register</button>
+        </form>
 
-</form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
 </body>
 </html>
-

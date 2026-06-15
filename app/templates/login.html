@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - AppShield</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <form method="POST" action="/login">
+    <div class="auth-container">
+        <h1>AppShield</h1>
+        <h2>Login</h2>
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Email"
-    >
+        <form method="POST" action="/login">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-    <input
-        type="password"
-        name="password"
-        placeholder="Password"
-    >
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Your password" required>
 
-    <button type="submit">
-        Login
-    </button>
+            <button type="submit">Login</button>
+        </form>
 
-</form>
+        <p>Don't have an account? <a href="/register">Register</a></p>
+    </div>
 </body>
 </html>
